@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.ruigu.tablayout.RTabLayout
+        android:id="@+id/rtl_test"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        app:rtabIndicatorColor="#00f00f"
+        app:rtabIndicatorHeight="4dp"
+        app:rtabIndicatorRadius="2dp"
+        app:rtabIndicatorWidth="20dp"
+        app:rtabIsSelectedBold="true"
+        app:rtabSelectedTextColor="#0000ff"
+        app:rtabTextSize="14sp" />
+
+
+    <!--    <HorizontalScrollView-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fillViewport="true"-->
+    <!--        android:layout_centerHorizontal="true">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                >-->
+
+    <!--                <View-->
+    <!--                    android:id="@+id/v1"-->
+    <!--                    android:layout_width="50dp"-->
+    <!--                    android:layout_centerInParent="true"-->
+    <!--                    android:layout_height="20dp"-->
+    <!--                    android:background="#120071" />-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="10dp"-->
+    <!--                    android:layout_height="10dp"-->
+    <!--                    android:background="#f26001"-->
+    <!--                    android:layout_marginStart="-10dp"-->
+    <!--                    android:layout_toEndOf="@id/v1"/>-->
+
+    <!--            </RelativeLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                >-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="50dp"-->
+    <!--                    android:background="#126871" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                >-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="50dp"-->
+    <!--                    android:background="#f26001" />-->
+
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+
+
+    <!--    </HorizontalScrollView>-->
+
+
+    <!--    <com.ruigu.tablayout.DrawableTextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:paddingStart="20dp"-->
+    <!--        android:text="123456"-->
+    <!--        app:iconMarginToText="20dp"-->
+    <!--        app:iconSize="30dp"-->
+    <!--        app:iconSrc="@mipmap/tab1_on"-->
+    <!--        app:textIconGravity="left" />-->
+
+    <!--    <com.google.android.material.tabs.TabLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:tabMode="fixed"/>-->
+
+
+</RelativeLayout>

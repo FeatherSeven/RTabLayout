@@ -1,0 +1,2 @@
+include ':app', ':rtab_layout'
+rootProject.name='TestRtabLayout'

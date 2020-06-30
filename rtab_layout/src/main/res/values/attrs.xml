@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="iconSize" format="dimension" />
+    <attr name="iconWidth" format="dimension" />
+    <attr name="iconHeight" format="dimension" />
+    <attr name="iconMarginToText" format="dimension" />
+
+    <declare-styleable name="RTabLayout">
+
+        <attr name="iconSize" />
+        <attr name="iconWidth" />
+        <attr name="iconHeight" />
+        <attr name="iconMarginToText" />
+        <attr name="rtabIconGravity">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+
+        <attr name="rtabIndicator" format="reference" />
+        <attr name="rtabIndicatorColor" format="color" />
+        <attr name="rtabIndicatorWidth" format="dimension" />
+        <attr name="rtabIndicatorHeight" format="dimension" />
+        <attr name="rtabIndicatorRadius" format="dimension" />
+        <attr name="rtabIndicatorFullWidth" format="boolean" />
+        <attr name="rtabIndicatorAnimationDuration" format="integer" />
+        <attr name="rtabIndicatorGravity">
+            <enum name="bottom" value="0" />
+            <enum name="center" value="1" />
+            <enum name="top" value="2" />
+            <enum name="stretch" value="3" />
+        </attr>
+
+        <attr name="rtabPadding" format="dimension" />
+        <attr name="rtabPaddingStart" format="dimension" />
+        <attr name="rtabPaddingTop" format="dimension" />
+        <attr name="rtabPaddingEnd" format="dimension" />
+        <attr name="rtabPaddingBottom" format="dimension" />
+
+        <attr name="rtabTextAppearance" format="reference" />
+        <attr name="rtabTextColor" format="color" />
+        <attr name="rtabIsSelectedBold" format="boolean" />
+        <attr name="rtabSelectedTextColor" format="color" />
+        <attr name="rtabTextSize" format="dimension" />
+
+
+        <attr name="msgTextSize" format="dimension" />
+        <attr name="msgTextColor" format="color" />
+        <attr name="msgBackGroundColor" format="color" />
+        <attr name="msgHeight" format="dimension" />
+        <attr name="msgCornerRadius" format="dimension" />
+        <attr name="msgDotSize" format="dimension" />
+        <attr name="msgHigher" format="dimension" />
+        <attr name="marginTopOfMsg" format="dimension" />
+        <attr name="msgIndentation" format="dimension" />
+
+        <attr name="isSegment" format="boolean" />
+        <attr name="segmentStrokeColor" format="color" /><!--边框颜色-->
+        <attr name="segmentStrokeWidth" format="dimension" /><!--边框宽度-->
+        <attr name="segmentRadiusHalfHeight" format="boolean" />
+        <attr name="segmentBackgroundColor" format="color" />
+        <attr name="segmentRadius" format="dimension" />
+
+
+        <attr name="rtabMinWidth" format="dimension" />
+        <attr name="rtabMaxWidth" format="dimension" />
+<!--        <attr name="rtabMode" format="enum">-->
+<!--            <enum name="scrollable" value="0" />-->
+<!--            <enum name="fixed" value="1" />-->
+<!--        </attr>-->
+        <attr name="rtabTabAverageWidth" format="boolean" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="MsgView">
+        <!-- 圆角矩形背景色 -->
+        <attr name="mv_backgroundColor" format="color" />
+        <!-- 圆角弧度,单位dp-->
+        <attr name="mv_cornerRadius" format="dimension" />
+        <!-- 圆角边框宽度,单位dp-->
+        <attr name="mv_strokeWidth" format="dimension" />
+        <!-- 圆角边框颜色-->
+        <attr name="mv_strokeColor" format="color" />
+        <!-- 圆角弧度是高度一半-->
+        <attr name="mv_isRadiusHalfHeight" format="boolean" />
+        <!-- 圆角矩形宽高相等,取较宽高中大值-->
+        <attr name="mv_isWidthHeightEqual" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+
+        <attr name="textIconGravity">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+        <attr name="iconSize" />
+        <attr name="iconWidth" />
+        <attr name="iconHeight" />
+        <attr name="iconMarginToText" />
+        <attr name="iconSrc" format="reference" />
+
+    </declare-styleable>
+
+</resources>
