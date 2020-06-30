@@ -229,10 +229,6 @@ public class RTabLayout extends HorizontalScrollView {
         typeArray.recycle();
     }
 
-    public void setRtabTabAverageWidth(boolean rtabTabAverageWidth) {
-        this.rtabTabAverageWidth = rtabTabAverageWidth;
-        ViewCompat.postInvalidateOnAnimation(this.slidingTabIndicator);
-    }
 
     public void setSelectedTabIndicatorColor(@ColorInt int color) {
         tabIndicatorColor = color;
@@ -633,7 +629,7 @@ public class RTabLayout extends HorizontalScrollView {
 
     private android.widget.LinearLayout.LayoutParams createLayoutParamsForTabs() {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
-//        this.updateTabViewLayoutParams(lp);
+        this.updateTabViewLayoutParams(lp);
         //specWidthMode在onMeasure时更新，但平常在onResume（这在onMeasure之前）中addTabView，无法得到正确的LayoutParams，暂时放弃在addView时修改layoutParams
         return lp;
     }
@@ -1344,23 +1340,17 @@ public class RTabLayout extends HorizontalScrollView {
 
             if (drawableTextView == null) {
                 drawableTextView = new DrawableTextView(getContext());
-                addView(drawableTextView, 0);
-                LayoutParams layoutParams = (LayoutParams) drawableTextView.getLayoutParams();
-                layoutParams.height = LayoutParams.WRAP_CONTENT;
-                layoutParams.width = LayoutParams.WRAP_CONTENT;
+                LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
                 layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
-//                LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-//                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
-//                addView(drawableTextView, 0,layoutParams);//TODO:先addView再layoutParams会不会增加onMeasure次数？
                 drawableTextView.setMaxLines(1);
                 drawableTextView.setSingleLine();
-                drawableTextView.setLayoutParams(layoutParams);
                 drawableTextView.setId(View.generateViewId());
                 TextViewCompat.setTextAppearance(drawableTextView, tabTextAppearance);
                 drawableTextView.setTextSize(COMPLEX_UNIT_PX, tabTextSize);
                 if (tabTextColors != null) {
                     drawableTextView.setTextColor(tabTextColors);
                 }
+                addView(drawableTextView,layoutParams);
             }
 
             if (tab != null && tab.icon != 0) {
@@ -1385,14 +1375,15 @@ public class RTabLayout extends HorizontalScrollView {
                 msgView.setBackgroundColor(msgBackGroundColor);
                 msgView.setCornerRadius(msgCornerRadius);
                 msgView.setVisibility(INVISIBLE);
-                addView(msgView);
                 LayoutParams layoutParams = (LayoutParams) msgView.getLayoutParams();
                 layoutParams.height = msgHeight;
                 layoutParams.width = LayoutParams.WRAP_CONTENT;
-                layoutParams.addRule(END_OF, drawableTextView.getId());
-                layoutParams.addRule(ALIGN_TOP, drawableTextView.getId());
+//                layoutParams.addRule(END_OF, drawableTextView.getId());
+//                layoutParams.addRule(ALIGN_TOP, drawableTextView.getId());
+//                TODO:放弃通过RelativeLayout的相对属性来定位MsgView，在Measure一次之后直接通过DrawableTextView测量结果来定位
                 //END_OF时leftMargin设为负值无效 drawableText设为CenterHorizon也无法正常显示
-                msgView.setLayoutParams(layoutParams);
+                addView(msgView, layoutParams);
+
             }
 
             if (tab != null && msgView != null) {
